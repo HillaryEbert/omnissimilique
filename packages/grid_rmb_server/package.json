@@ -1,0 +1,36 @@
+{
+  "name": "@threefold/grid_rmb_server",
+  "author": "Ahmed Hanafy",
+  "version": "2.1.3",
+  "license": "ISC",
+  "homepage": "https://github.com/threefoldtech/tfgrid-sdk-ts/blob/development/packages/grid_rmb_server/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/threefoldtech/tfgrid-sdk-ts.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@threefold/grid_client": "^2.1.3",
+    "@threefold/rmb_peer_server": "^2.1.3",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@threefold/rmb_peer_client": "^2.1.3",
+    "ts-node": "^10.9.1"
+  },
+  "main": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "bin": {
+    "grid_rmb_server": "./dist/server.js"
+  },
+  "private": false,
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "start": "ts-node --project tsconfig.json src/index.ts"
+  }
+}
